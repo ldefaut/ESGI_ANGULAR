@@ -1,7 +1,7 @@
 # KanbanFire
 
 ## Student Name: [Louis DEFAUT] 
-I had never created any project on angular before this week
+I had never created any project with angular before this week
 
 ## Project Description
 
