@@ -1,0 +1,70 @@
+<div class="content-wrapper">
+  <button (click)="taskService.newTask()" mat-button>
+    <mat-icon>add</mat-icon>
+    Add Task
+  </button>
+
+  <div class="container-wrapper">
+    <div class="container todo">
+      <h2>Backlog</h2>
+
+      <mat-card
+        cdkDropList
+        #todoList="cdkDropList"
+        [cdkDropListData]="todo | async"
+        [cdkDropListConnectedTo]="[doneList, inProgressList]"
+        (cdkDropListDropped)="taskService.drop($event)"
+        id="todo"
+        class="list">
+        <p class="empty-label" *ngIf="(todo | async)?.length === 0">Empty list</p>
+        <app-task
+          (edit)="taskService.editTask('todo', $event)"
+          *ngFor="let task of todo | async"
+          cdkDrag
+          [task]="task">
+        </app-task>
+      </mat-card>
+    </div>
+
+    <div class="container inProgress">
+      <h2>In progress</h2>
+
+      <mat-card
+        cdkDropList
+        #inProgressList="cdkDropList"
+        [cdkDropListData]="inProgress | async"
+        [cdkDropListConnectedTo]="[todoList, doneList]"
+        (cdkDropListDropped)="taskService.drop($event)"
+        id="inProgress"
+        class="list">
+        <p class="empty-label" *ngIf="(inProgress | async)?.length === 0">Empty list</p>
+        <app-task
+          (edit)="taskService.editTask('inProgress', $event)"
+          *ngFor="let task of inProgress | async"
+          cdkDrag
+          [task]="task">
+        </app-task>
+      </mat-card>
+    </div>
+
+    <div class="container done">
+      <h2>Done</h2>
+
+      <mat-card
+        cdkDropList
+        #doneList="cdkDropList"
+        [cdkDropListData]="done | async"
+        [cdkDropListConnectedTo]="[todoList, inProgressList]"
+        (cdkDropListDropped)="taskService.drop($event)"
+        id="done"
+        class="list">
+        <p class="empty-label" *ngIf="(done | async)?.length === 0">Empty list</p>
+        <app-task
+          (edit)="taskService.editTask('done', $event)"
+          *ngFor="let task of done | async" cdkDrag
+          [task]="task">
+        </app-task>
+      </mat-card>
+    </div>
+  </div>
+</div>

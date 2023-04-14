@@ -1,6 +1,19 @@
 # KanbanFire
 
+## Student Name: [Louis DEFAUT] 
+I had never created any project on angular before this week
+
+## Project Description
+
+This project is a Kanban board. It is a tool that helps visualize work, limit work-in-progress, and maximize efficiency (or flow). It uses cards to represent work items and columns to represent each step of the process. The Kanban board is a pull system that balances demands with available capacity. It is a visual management system that helps you maximize efficiency (or flow).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+
+This project uses material design for angular. You can find more information on [Angular Material](https://material.angular.io/).
+
+## Installation
+
+Run `npm install` to install all the dependencies.
 
 ## Development server
 
@@ -13,14 +26,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 

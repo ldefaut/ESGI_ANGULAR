@@ -1,0 +1,31 @@
+.content-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.content-wrapper .media {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px 10px rgba(179,179,179,0.5);
+  border-radius: 4px;
+}
+
+.content-wrapper .media .media-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.content-wrapper .media .media-header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.content-wrapper .media .media-body {
+  padding: 20px;
+  text-align: center;
+}

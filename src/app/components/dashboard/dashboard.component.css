@@ -1,0 +1,55 @@
+.content-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.container {
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container.done h2 {
+  background-color: #ff494c61;
+  width: max-content;
+  max-width: 100%;
+  padding: 3px 12px;
+  border-radius: 3px;
+}
+
+.container.inProgress h2 {
+  background-color: #ff9f3c61;
+  width: max-content;
+  max-width: 100%;
+  padding: 3px 12px;
+  border-radius: 3px;
+}
+
+.container.todo h2 {
+  background-color: #00d1b261;
+  width: max-content;
+  max-width: 100%;
+  padding: 3px 12px;
+  border-radius: 3px;
+}
+
+mat-card {
+  flex-wrap: nowrap;
+  flex-direction: column;
+  min-height: 50vh;
+  padding: 10px;
+  max-height: 70vh;
+  overflow: scroll;
+}
+
+app-task {
+  width: 100%;
+}

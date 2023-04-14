@@ -1,0 +1,23 @@
+<!-- Sidebar navigation -->
+<div class="content-wrapper">
+  <div class="container-wrapper">
+    <div class="profile-container">
+      <h2>User Profile</h2>
+      <div class="media" *ngIf="authService.userData as user">
+        <div class="media-header">
+          <img
+            matPrefix
+            src="{{(user.photoURL) ? user.photoURL :'/assets/carrypotter.gif'}}"
+            alt="{{user.displayName}}"
+          >
+        </div>
+        <div class="media-body">
+          <h2>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h2>
+          <p>User ID: <strong>{{user.uid}}</strong></p>
+          <p>Email: <strong>{{user.email}}</strong></p>
+          <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

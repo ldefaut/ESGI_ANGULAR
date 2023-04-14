@@ -1,0 +1,42 @@
+<div class="content-wrapper">
+  <div class="container-wrapper">
+    <div class="sign-in-container">
+      <h2>Sign In</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="Email" required #userEmail>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" #userPwd required>
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-action-row>
+        <button
+          mat-raised-button
+          (click)="authService.signUp(userEmail.value, userPwd.value)"
+          color="primary">
+          Sign Up
+        </button>
+        or
+        <button mat-button (click)="authService.googleAuth()">
+          Sign in with Google
+        </button>
+      </mat-action-row>
+      <mat-action-row>
+        <div class="redirectToLogin">
+          <span>Don't have an account?
+            <span class="redirect" routerLink="/sign-in"> Sign in</span>
+          </span>
+        </div>
+      </mat-action-row>
+    </div>
+  </div>
+</div>

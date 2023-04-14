@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-fire-fb11e": {
+      "hosting": {
+        "kanban-fire": [
+          "angular-fire-fb11e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-fire-fb11e"
+  }
+}

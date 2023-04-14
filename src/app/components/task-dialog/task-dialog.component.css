@@ -1,0 +1,10 @@
+mat-form-field {
+  width: 100%;
+}
+
+mat-action-row {
+  padding: 0px 24px 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}

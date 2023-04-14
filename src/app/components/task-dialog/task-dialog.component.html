@@ -1,0 +1,33 @@
+<div mat-dialog-content>
+  <p>What is your new task?</p>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput cdkFocusInitial [(ngModel)]="data.task.title" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="data.task.description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>To do before</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.task.todoBefore">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<mat-action-row>
+  <button mat-button [mat-dialog-close]="{ task: data.task }">OK</button>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button
+    *ngIf="data.enableDelete"
+    mat-fab
+    color="primary"
+    aria-label="Delete"
+    [mat-dialog-close]="{ task: data.task, delete: true }">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-action-row>

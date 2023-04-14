@@ -1,0 +1,20 @@
+.sign-in-container {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+mat-form-field {
+  display: block;
+}
+
+mat-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+mat-action-row span {
+  cursor: pointer;
+}
