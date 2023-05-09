@@ -1,8 +1,19 @@
 <div class="content-wrapper">
-  <button (click)="taskService.newTask()" mat-button>
-    <mat-icon>add</mat-icon>
-    Add Task
-  </button>
+  <div class="container-wrapper">
+    <button (click)="taskService.newTask()" mat-button>
+      <mat-icon>add</mat-icon>
+      Add Task
+    </button>
+    <mat-form-field appearance="fill">
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="viewOrder" (selectionChange)="selectViewOrder($event)">
+        <mat-option
+          *ngFor="let viewOrder of viewOrderTypes | keyvalue" [value]="viewOrder.key">
+          {{ viewOrder.value }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
   <div class="container-wrapper">
     <div class="container todo">

@@ -5,7 +5,7 @@
 
 .container-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 10px 0;
   gap: 10px;
@@ -46,7 +46,7 @@ mat-card {
   flex-direction: column;
   min-height: 50vh;
   padding: 10px;
-  max-height: 70vh;
+  max-height: 65vh;
   overflow: scroll;
 }
 

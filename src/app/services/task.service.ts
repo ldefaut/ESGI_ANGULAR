@@ -2,10 +2,15 @@ import {BehaviorSubject, Observable} from "rxjs";
 import {Task} from "../components/task/task";
 import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/compat/firestore";
 import {MatDialog} from "@angular/material/dialog";
-import {TaskDialogComponent, TaskDialogResult} from "../components/task-dialog/task-dialog.component";
+import {
+  TaskDialogComponent,
+  TaskDialogResult
+} from "../components/task-dialog/task-dialog.component";
 import {CdkDragDrop, transferArrayItem} from "@angular/cdk/drag-drop";
 import {AuthService} from "./auth.service";
 import {Injectable} from "@angular/core";
+import {doc} from "@angular/fire/firestore";
+import {ViewOrderTypes} from "../components/dashboard/view.order.types";
 
 const getObservable = (collection: AngularFirestoreCollection<Task>) => {
   const subject = new BehaviorSubject<Task[]>([]);
@@ -26,18 +31,31 @@ export class TaskService {
   ) {
   }
 
-  getTasks(list: 'done' | 'todo' | 'inProgress'): Observable<Task[]> {
+  getTasks(list: 'done' | 'todo' | 'inProgress', orderBy: ViewOrderTypes): Observable<Task[]> {
     const user = this.authService.userData;
     if (user) {
       return getObservable(
         this.store.collection<Task>(
           list,
-          (ref) => ref.where('userId', '==', user.uid)
+          (ref) => ref.where(
+            'userId',
+            '==',
+            user.uid
+          ).orderBy(
+              orderBy,
+            'asc'
+          )
         )
       );
     }
 
-    return getObservable(this.store.collection<Task>(list));
+    return getObservable(this.store.collection<Task>(list, (ref) =>
+        ref.orderBy(
+          orderBy,
+        'asc'
+        )
+      )
+    );
   }
 
   newTask(): void {
@@ -56,6 +74,7 @@ export class TaskService {
         if (!result) {
           return;
         }
+        result.task.insensitiveTitle = result.task.title?.toLowerCase();
         this.store.collection('todo').add(result.task);
       });
   }
@@ -75,6 +94,7 @@ export class TaskService {
       if (result.delete) {
         await this.store.collection<Task>(list).doc(task.id).delete();
       } else {
+        result.task.insensitiveTitle = result.task.title?.toLowerCase();
         await this.store.collection<Task>(list).doc(task.id).update(task);
       }
     });
