@@ -3,6 +3,12 @@
     <mat-icon>local_fire_department</mat-icon>
     <span>Kanban Fire</span>
   </div>
+  <ul class='locale'>
+    <li *ngFor="let locale of locales | keyvalue" (click)="changeLocale(locale.key)"
+        [ngClass]="{'current' : translate.currentLang === locale.key}">
+      <span>{{locale.value}}</span>
+    </li>
+  </ul>
   <div class="login" *ngIf="authService.userData as user">
     <span routerLink="/user-profile">{{user.displayName ?? user.email}}</span>
     <mat-icon (click)="authService.signOut()">logout</mat-icon>

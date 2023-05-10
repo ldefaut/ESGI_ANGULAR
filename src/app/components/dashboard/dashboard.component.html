@@ -2,7 +2,9 @@
   <div class="container-wrapper">
     <button (click)="taskService.newTask()" mat-button>
       <mat-icon>add</mat-icon>
-      Add Task
+      <span>
+        {{'Add Task' | translate}}
+      </span>
     </button>
     <mat-form-field appearance="fill">
       <mat-label>Select an option</mat-label>
@@ -17,8 +19,7 @@
 
   <div class="container-wrapper">
     <div class="container todo">
-      <h2>Backlog</h2>
-
+      <h2>{{'backlog' | translate}}</h2>
       <mat-card
         cdkDropList
         #todoList="cdkDropList"
@@ -27,7 +28,7 @@
         (cdkDropListDropped)="taskService.drop($event)"
         id="todo"
         class="list">
-        <p class="empty-label" *ngIf="(todo | async)?.length === 0">Empty list</p>
+        <p class="empty-label" *ngIf="(todo | async)?.length === 0">{{'empty' | translate}}</p>
         <app-task
           (edit)="taskService.editTask('todo', $event)"
           *ngFor="let task of todo | async"
@@ -38,7 +39,7 @@
     </div>
 
     <div class="container inProgress">
-      <h2>In progress</h2>
+      <h2>{{'in-progress' | translate}}</h2>
 
       <mat-card
         cdkDropList
@@ -48,7 +49,7 @@
         (cdkDropListDropped)="taskService.drop($event)"
         id="inProgress"
         class="list">
-        <p class="empty-label" *ngIf="(inProgress | async)?.length === 0">Empty list</p>
+        <p class="empty-label" *ngIf="(inProgress | async)?.length === 0">{{'empty' | translate}}</p>
         <app-task
           (edit)="taskService.editTask('inProgress', $event)"
           *ngFor="let task of inProgress | async"
@@ -59,7 +60,7 @@
     </div>
 
     <div class="container done">
-      <h2>Done</h2>
+      <h2>{{'done' | translate}}</h2>
 
       <mat-card
         cdkDropList
@@ -69,7 +70,7 @@
         (cdkDropListDropped)="taskService.drop($event)"
         id="done"
         class="list">
-        <p class="empty-label" *ngIf="(done | async)?.length === 0">Empty list</p>
+        <p class="empty-label" *ngIf="(done | async)?.length === 0">{{'empty' | translate}}</p>
         <app-task
           (edit)="taskService.editTask('done', $event)"
           *ngFor="let task of done | async" cdkDrag

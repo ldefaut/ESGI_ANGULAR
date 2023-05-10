@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="english" datatype="html">
+        <source>English</source>
+        <target>Anglais</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="French" datatype="html">
+        <source>French</source>
+        <target>Français</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add-task" datatype="html">
+        <source> Add Task </source>
+        <target> Ajout de tâche </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="backlog" datatype="html">
+        <source>Backlog</source>
+        <target>A faire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="empty" datatype="html">
+        <source>Empty list</source>
+        <target>Liste vide</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">empty list</note>
+      </trans-unit>
+      <trans-unit id="in-progress" datatype="html">
+        <source>In progress</source>
+        <target>En cours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="done" datatype="html">
+        <source>Done</source>
+        <target>Terminé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="email-request-to-get-pass" datatype="html">
+        <source>Please enter your email address to request a password reset .</source>
+        <target>Veuillez entrer votre adresse email pour demander une réinitialisation de mot de passe.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">6,11</context>
+        </context-group>
+        <note priority="1" from="description">email to get password</note>
+      </trans-unit>
+      <trans-unit id="reset-password" datatype="html">
+        <source> Reset Password </source>
+        <target> Réinitialiser le mot de passe </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="go-back-to" datatype="html">
+        <source>Go back to ? </source>
+        <target>Retourner à ?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login" datatype="html">
+        <source>LogIn</source>
+        <target>Connexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sign-in" datatype="html">
+        <source>Sign In</source>
+        <target>Se connecter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="203827529942340818" datatype="html">
+        <source>Enter your email</source>
+        <target>Entrez votre email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">enter-email</note>
+      </trans-unit>
+      <trans-unit id="2772023564304193657" datatype="html">
+        <source>Enter your password</source>
+        <target>Entrez votre mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">enter-pass</note>
+      </trans-unit>
+      <trans-unit id="sign-in-google" datatype="html">
+        <source> Sign in with Google </source>
+        <target> Se connecter avec Google </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot-pass" datatype="html">
+        <source>Forgot Password?</source>
+        <target>Mot de passe oublié ?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dont-have-account" datatype="html">
+        <source>Don&apos;t have an account?</source>
+        <target>Vous n&apos;avez pas de compte ?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sign-up" datatype="html">
+        <source> Sign Up</source>
+        <target> S&apos;inscrire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sign-in/sign-in.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

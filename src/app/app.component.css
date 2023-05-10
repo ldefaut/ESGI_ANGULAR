@@ -63,3 +63,19 @@ app-new-task {
   text-align: center;
   opacity: 0.2;
 }
+
+.locale {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.locale > li {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.locale > li.current {
+  text-decoration: underline;
+}

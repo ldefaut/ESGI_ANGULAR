@@ -9,11 +9,22 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/kanban-fire",
+            "localize": true,
+            "i18nMissingTranslation": "error",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -48,6 +59,7 @@
             },
             "development": {
               "buildOptimizer": false,
+              "localize": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
@@ -59,6 +71,9 @@
                   "with": "src/environments/environment.development.ts"
                 }
               ]
+            },
+            "fr": {
+              "localize": ["fr"]
             }
           },
           "defaultConfiguration": "production"
@@ -71,6 +86,9 @@
             },
             "development": {
               "browserTarget": "kanban-fire:build:development"
+            },
+            "fr": {
+              "browserTarget": "kanban-fire:build:development,fr"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +96,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "kanban-fire:build"
+            "browserTarget": "kanban-fire:build",
+            "format": "xlf",
+            "outputPath": "src/locale"
           }
         },
         "test": {

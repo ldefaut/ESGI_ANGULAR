@@ -6,6 +6,12 @@ I had never created any project with angular before this week
 ## Hosting
 The project is hosted on [Firebase](https://angular-fire-fb11e.web.app/)
 
+## I18n
+The project is available in English and French.
+I started to use the i18n module but I didn't succeed to make the switcher. So after 3 hours 
+trying, I change to use the ngx-translate module. I didn't have time to translate all the fields 
+in my app.
+
 ## Project Description
 
 This project is a Kanban board. It is a tool that helps visualize work, limit work-in-progress, and maximize efficiency (or flow). It uses cards to represent work items and columns to represent each step of the process. The Kanban board is a pull system that balances demands with available capacity. It is a visual management system that helps you maximize efficiency (or flow).

@@ -1,0 +1,20 @@
+{
+  "english": "English",
+  "French": "French",
+  "add-task": " Add Task ",
+  "backlog": "Backlog",
+  "empty": "Empty list",
+  "in-progress": "In progress",
+  "done": "Done",
+  "email-request-to-get-pass": "Please enter your email address to request a password reset .",
+  "reset-password": " Reset Password ",
+  "go-back-to": "Go back to ? ",
+  "login": "LogIn",
+  "sign-in": "Sign In",
+  "enter-email": "Enter your email",
+  "enter-pass": "Enter your password",
+  "sign-in-google": " Sign in with Google ",
+  "forgot-pass": "Forgot Password?",
+  "dont-have-account": "Don't have an account?",
+  "sign-up": " Sign Up"
+}

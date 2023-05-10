@@ -1,0 +1,20 @@
+{
+  "english": "Anglais",
+  "French": "Français",
+  "add-task": " Ajouter une tâche ",
+  "backlog": "A faire",
+  "empty": "Liste vide",
+  "in-progress": "En cours",
+  "done": "Terminé",
+  "email-request-to-get-pass": "Veuillez entrer votre email pour recevoir un lien de réinitialisation de mot de passe.",
+  "reset-password": " Réinitialiser le mot de passe ",
+  "go-back-to": "Retourner vers ? ",
+  "login": "Connexion",
+  "sign-in": "Se connecter",
+  "enter-email": "Entrez votre email",
+  "enter-pass": "Entrer votre mot de passe",
+  "sign-in-google": " Se connecter avec Google ",
+  "forgot-pass": "Mot de passe oublié ?",
+  "dont-have-account": "Vous n'avez pas de compte ?",
+  "sign-up": " S'inscrire "
+}
