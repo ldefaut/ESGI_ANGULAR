@@ -1,7 +1,7 @@
 <mat-card *ngIf="task" (dblclick)="edit.emit(task)">
   <div class="content">
     <h3>{{task.title}}</h3>
-    <p>{{task.description}}</p>
+    <p>{{task.description | small:40}}</p>
     <p><i>To do before {{task.todoBefore?.toDate() | date: 'shortDate' }}</i></p>
   </div>
   <mat-action-row>

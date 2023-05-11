@@ -34,6 +34,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { SmallPipe } from './pipe/small.pipe';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,6 +51,7 @@ export function createTranslateLoader(http: HttpClient) {
     ForgotPasswordComponent,
     VerifyEmailComponent,
     UserProfileComponent,
+    SmallPipe,
   ],
   imports: [
     BrowserModule,

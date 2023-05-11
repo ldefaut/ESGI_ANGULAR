@@ -60,7 +60,8 @@ export class TaskService {
 
   newTask(): void {
     const dialogRef = this.dialog.open(TaskDialogComponent, {
-      width: '300px',
+      width: '600px',
+      height: '400px',
       data: {
         task: {
           userId: this.authService.userData.uid,
@@ -81,7 +82,8 @@ export class TaskService {
 
   editTask(list: 'done' | 'todo' | 'inProgress', task: Task): void {
     const dialogRef = this.dialog.open(TaskDialogComponent, {
-      width: '270px',
+      width: '600px',
+      height: '400px',
       data: {
         task,
         enableDelete: true,
